@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElasticSearchDemo", "ElasticSearchDemo\ElasticSearchDemo.csproj", "{421BCF70-5E1B-4D01-AE6D-7757147CA113}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flight", "Flight\Flight.csproj", "{67B5A725-4067-4D5B-9EEA-5E2794DBA268}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{421BCF70-5E1B-4D01-AE6D-7757147CA113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{421BCF70-5E1B-4D01-AE6D-7757147CA113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{421BCF70-5E1B-4D01-AE6D-7757147CA113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{421BCF70-5E1B-4D01-AE6D-7757147CA113}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B5A725-4067-4D5B-9EEA-5E2794DBA268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B5A725-4067-4D5B-9EEA-5E2794DBA268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B5A725-4067-4D5B-9EEA-5E2794DBA268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B5A725-4067-4D5B-9EEA-5E2794DBA268}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2872E86F-A65A-48FD-8DE8-0F09E4AE03DD}
+	EndGlobalSection
+EndGlobal
