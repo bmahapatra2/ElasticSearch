@@ -1,8 +1,11 @@
-﻿using Nest;
+﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.Text;
+using System.Threading.Tasks;
+using Nest;
 
 namespace Flight
 {
@@ -11,15 +14,17 @@ namespace Flight
         ElasticClient client = null;
         public ElasticSearchImplementation()
         {
-            var uri = new Uri("http://172.16.14.49:9200");
+            var uri = new Uri("http://172.16.14.49:9200/");
             var settings = new ConnectionSettings(uri);
             client = new ElasticClient(settings);
-            settings.DefaultIndex("FlightDetails");
-
+            settings.DefaultIndex("flightdetail");
+            client.Index("flightdetail");
         }
+
+
         public List<FlightDetails> GetResult()
         {
-            //if (client.IndexExists("FlightDetails").Exists)
+            if (client.IndexExists("flightdetail").Exists)
             {
                 var response = client.Search<FlightDetails>();
                 return response.Documents.ToList();
@@ -29,7 +34,7 @@ namespace Flight
 
         public List<FlightDetails> GetResult(string condition)
         {
-            if (client.IndexExists("FlightDetails").Exists)
+            if (client.IndexExists("flightdetail").Exists)
             {
                 var query = condition;
 

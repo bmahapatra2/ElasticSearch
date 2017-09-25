@@ -25,15 +25,16 @@ namespace Flight
             set;
         }
 
-        public FlightDetails()
-        {
-
-        }
+       
         public FlightDetails(int id, string flightName, string flightDestination)
         {
             this.ID = id;
             this.FlightName = flightName;
             this.FlightDestination = flightDestination;
+        }
+
+        public FlightDetails()
+        {
         }
     }
 }

@@ -3,6 +3,8 @@ using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Flight;
 using System.Linq;
+using System.Collections;
+
 
 namespace ElasticSearchDemo
 {
@@ -24,12 +26,30 @@ namespace ElasticSearchDemo
         public void GetResultTest()
         {
             ElasticSearchImplementation search = new ElasticSearchImplementation();
-            FlightDetails details = new FlightDetails();
             var result = search.GetResult();
-            //result.Contains("airindia";
-            Assert.IsFalse(result.FirstOrDefault<FlightDetails>(x => x.FlightName == "airindia") != null);
-            Assert.IsFalse(result.FirstOrDefault<FlightDetails>(x => x.FlightName == "jetairways") != null);
-            Assert.IsFalse(result.FirstOrDefault<FlightDetails>(x => x.FlightName == "indigo") != null);
+            
+            Assert.IsTrue(result.FirstOrDefault<FlightDetails>(x => x.FlightName == "airindia") != null);
+            Assert.IsTrue(result.FirstOrDefault<FlightDetails>(x => x.FlightName == "jetairways") != null);
+            Assert.IsTrue(result.FirstOrDefault<FlightDetails>(x => x.FlightName == "indigo") != null);
         }
+
+        [TestMethod]
+        public void CountResult()
+        {
+            ElasticSearchImplementation search = new ElasticSearchImplementation();
+            var result = search.GetResult();
+            Assert.AreEqual(5, search.GetResult().Count);
+        }
+        
+        [TestMethod]
+        public void DataCheckResult()
+        {
+            ElasticSearchImplementation search = new ElasticSearchImplementation();
+            var result = search.GetResult();
+            FlightDetails flight = new FlightDetails();
+            Assert.IsTrue(true, search.GetResult().Equals(flight).ToString());
+        }
+
     }
 }
+ 
